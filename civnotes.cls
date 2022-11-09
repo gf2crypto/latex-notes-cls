@@ -247,6 +247,7 @@
   citestyle=numeric-comp, %подключение стиля
   language=auto, %указание сортировки языков
   sorting=none, %тип сортировки в библиографии
+  style=verbose,
   doi=true,
   eprint=false,
   isbn=false,
@@ -399,10 +400,10 @@
     \newpage
 }
 
-%%%%%%%%%%%%%%%%%%%Печатаем библиографию%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\AtEndDocument{
-    \printbibliography[heading=none]
-}
+%%%%%%%%%%%%%%%%%%%%Печатаем библиографию%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\AtEndDocument{
+%    \printbibliography[heading=none]
+%}
 
 %%%%%%%%%%%%%%%%%%%%Делаем так, чтобы ссылки печатались сносками%%%%%
 \renewcommand{\cite}[1]{\footcite{#1}}
