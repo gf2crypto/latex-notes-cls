@@ -461,3 +461,11 @@
     \renewcommand{\notetags}{\forcsvlist\addhashtag{#1}}  %%% фактически добавляем к каждому элементу списка хеш-тег
 }
 
+%%%%%% Команда для добавления специального раздела со ссылками на другие заметки
+\newcommand*{\seealsomessage}{См.~также}
+\newcommand*{\seealsotag}{see-also}
+
+\newcommand*{\seealso}{%
+    \subsection{\seealsomessage}
+    \label{subsec:\currfilebase:\seealsotag}
+}
