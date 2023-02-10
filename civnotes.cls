@@ -253,17 +253,17 @@
 
 %%%%%%%%%%%%%%%%%%%%Оформление библиографии по ГОСТ
 \RequirePackage[%
-  backend=biber, %подключение пакета biber
-  bibstyle=gost-numeric, %подключение одного из четырех главных стилей biblatex-gost
-  citestyle=numeric-comp, %подключение стиля
-  language=auto, %указание сортировки языков
-  sorting=none, %тип сортировки в библиографии
-  style=verbose,
-  doi=true,
-  eprint=false,
-  isbn=false,
-  dashed=true,
-  url=true
+    backend=biber, %подключение пакета biber
+    bibstyle=gost-numeric, %подключение одного из четырех главных стилей biblatex-gost
+    citestyle=numeric-comp, %подключение стиля
+    language=auto, %указание сортировки языков
+    sorting=none, %тип сортировки в библиографии
+    style=verbose,
+    doi=true,
+    eprint=false,
+    isbn=false,
+    dashed=true,
+    url=true
 ]{biblatex}
 \addbibresource{mynotes.bib}
 
@@ -478,4 +478,12 @@
 \newcommand*{\seealso}{%
     \subsection{\seealsomessage}
     \label{subsec:\currfilebase:\seealsotag}
+}
+
+%%%%%% Полезные команды для создания на основе заметок других документов, например, лекций
+\newcommand{\NotesPath}{}
+\newcommand{\inputnote}[1]{\input{\NotesPath/#1}}
+\newcommand{\setNotesPath}[1]{
+    \renewcommand{\NotesPath}{#1}
+    \graphicspath{{\NotesPath/images/}}
 }
