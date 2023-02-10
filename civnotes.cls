@@ -5,8 +5,8 @@
 \DeclareOption{final}{\renewcommand{\STATUS}{final}}
 \ProcessOptions\relax
 \LoadClass[
-    8pt,
-    \STATUS
+8pt,
+\STATUS
 ]{extarticle}
 
 %%%%%%%%%%%%%%%%%%%Настройка шрифтов%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -320,6 +320,11 @@
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\wt}{wt}
 \DeclareMathOperator{\len}{len}
+\DeclareMathOperator{\argmin}{argmin}
+\DeclareMathOperator{\im}{}
+\newcommand{\getsR}{\mathrel{\overset{\$}{\gets}}}
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}  %%% масштабирование формулы
+
 
 %%%%%%% Красивое оформление математических окружений
 \RequirePackage{thmtools}
