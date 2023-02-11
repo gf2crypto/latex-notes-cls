@@ -265,7 +265,7 @@
     dashed=true,
     url=true
 ]{biblatex}
-\addbibresource{mynotes.bib}
+%\addbibresource{mynotes.bib}
 
 %%%%%%%%%%%%%%%%%%%Полезные команды%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Возможность использовать автонумерацию
