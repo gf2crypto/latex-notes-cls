@@ -27,6 +27,8 @@
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{amsfonts}
+\RequirePackage{stmaryrd}    %St Mary Road symbols for theoretical computer science
+\RequirePackage{marvosym}    %Martin Vogel's Symbol font (marvosym) contains the Euro currency
 %Красивые дроби
 \RequirePackage{xfrac}
 %Дополнительные математические окружения
@@ -43,6 +45,8 @@
 \RequirePackage{indentfirst}
 %Точка после номера раздела
 \RequirePackage{misccorr}
+
+\RequirePackage{enumitem}  % Замена стандартных нумерованных и ненумерованных списков
 
 \RequirePackage{hyperref}
 %Тонкое оформление перекрёстных ссылок
@@ -106,6 +110,7 @@
 %%%%%%%%%%%%%%%%%%%%Обеспечиваем оформление алгоритмов и листингов%%%
 %Включение в документ листингов
 \RequirePackage{listings}
+\RequirePackage{algpseudocode}
 
 %Окружение для алгоритма
 \RequirePackage[%
@@ -266,6 +271,14 @@
     url=true
 ]{biblatex}
 %\addbibresource{mynotes.bib}
+
+%%%%%%%%%%%%%%%%%%%% Изменяем длину номера в оглавлении%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% При большом количестве заметок%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% возникает наложение %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{tocloft}
+%\RequirePackage{marvosym}
+\setlength\cftsecnumwidth{2.5em}
+\setlength\cftsubsecnumwidth{3em}
 
 %%%%%%%%%%%%%%%%%%%Полезные команды%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Возможность использовать автонумерацию
@@ -486,4 +499,20 @@
 \newcommand{\setNotesPath}[1]{
     \renewcommand{\NotesPath}{#1}
     \graphicspath{{\NotesPath/images/}}
+}
+
+%%%%% Ссылка на заметку%%%%%%%%%%%%%%%
+\newcommand*{\refnote}[1]{%
+    #1~(\ref{sec:#1})
+}
+\newcommand*{\hrefnotemessage}{}
+\newcommand*{\hrefnote}[2][]{%
+    \ifstrempty{#1}{\renewcommand*{\hrefnotemessage}{#2}}{\renewcommand*{\hrefnotemessage}{#1}}%
+    \hyperref[sec:#2]{\hrefnotemessage}%
+}
+
+\newcommand{\noteid}{\currfilebase}
+
+\newcommand{\addlabel}[2]{%
+    \label{#1:\noteid:#2}
 }
