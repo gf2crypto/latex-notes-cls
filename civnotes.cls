@@ -9,6 +9,8 @@
 \STATUS
 ]{extarticle}
 
+\RequirePackage{subfiles}
+
 %%%%%%%%%%%%%%%%%%%Настройка шрифтов%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Поддержка русского языка
 \RequirePackage[T1, T2A]{fontenc}
