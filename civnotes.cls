@@ -473,12 +473,12 @@
 
 %%%%% Создаём заметку
 \newcommand*{\note}[2][\DefaultOpt]{%
-    \def\DefaultOpt{#2}%  %% нужно для корректной работы с section
-    \section[#1]{#2}
-    \label{sec:\currfilebase}%   %%% создаём метку в стиле sec:id, id - фактически имя файла
-    \sectionmark{\currfilebase}%   %%% добавляем id заметки в колонтитулы
+    \def\DefaultOpt{\noteid:~#2}%  %% нужно для корректной работы с section
+    \section[#1]{\noteid:~~#2}
+    \label{sec:\noteid}%   %%% создаём метку в стиле sec:id, id - фактически имя файла
+    \sectionmark{\noteid}%   %%% добавляем id заметки в колонтитулы
     \setcounter{page}{1}           %%%% для нумерации страниц каждой заметки с 1
-    \renewcommand{\notetags}{}     %%%% обнуляем переменную тегов
+%    \renewcommand{\notetags}{}     %%%% обнуляем переменную тегов
 }
 
 %%%%% Команда для добавления тегов к заметке
