@@ -1,24 +1,32 @@
-\note{Теорема Пифагора}
-\addtags{прямоугольный треугольник, Пифагор}
+\documentclass[example-notes.tex]{subfiles}
 
-\begin{definition}
-    \label{def:202211081146}
-    \emph{Прямоугольным треугольником} называется треугольник, у которого один угол равен 90 градусам.
-\end{definition}
+\begin{document}
+    \note{Теорема Пифагора}
+    \addtags{прямоугольный треугольник, Пифагор}
 
-\begin{theorem}
-    \label{thm:202211081146}
-    Сумма квадратов катетов равна квадрату гипотенузы, т.е.
-    \[
-        a^2+b^2=c^2.
-    \]
-\end{theorem}
-\begin{proof}
-    Доказательство очень простое.
-\end{proof}
+    \begin{definition}
+        \label{def:202211081146}
+        \emph{Прямоугольным треугольником} называется треугольник, у которого один угол равен 90 градусам.
+    \end{definition}
 
-\seealso
+    \begin{theorem}
+        \label{thm:202211081146}
+        Сумма квадратов катетов равна квадрату гипотенузы, т.е.
+        \begin{equation}
+            \label{eq:202211081146:piphagor}
+            a^2+b^2=c^2.
+        \end{equation}
+    \end{theorem}
+    \begin{proof}
+        Доказательство очень простое.
+    \end{proof}
 
-См.~также заметку~\hrefnote{202211081205}.
+    \subsection{Это подраздел}\label{subsec:202211081146:this}
 
-Также интересна статья Р.~Мак-Элиса~\cite{j.mceliece1978}.
+    \Blindtext
+
+    \seealso
+    См.~также заметку~\hrefnote{202211081205}.
+
+    Также интересна статья Р.~Мак-Элиса~\cite{j.mceliece1978}.
+\end{document}
