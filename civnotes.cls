@@ -446,6 +446,19 @@
 \declaretheorem[style=thmvioletbox, numberwithin=section, name=Проблема]{problem}
 \declaretheorem[style=thmvioletbox, numbered=no, name=Проблема]{problem*}
 
+%%%%% Упражнение
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{Plum!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=Plum, backgroundcolor=Plum!5,
+    }
+]{thmplumbox}
+
+\declaretheorem[style=thmplumbox, numberwithin=section, name=Упражнение]{exercise}
+\declaretheorem[style=thmplumbox, numbered=no, name=Упражнение]{exercise*}
+
 %%%%%%%%%%%%%%%%%%%Содержание%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginDocument{%
     \tableofcontents
