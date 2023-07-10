@@ -439,12 +439,26 @@
     mdframed={
         linewidth=2pt,
         rightline=false, topline=false, bottomline=false,
-        linecolor=VioletRed, backgroundcolor=VioletRed!5,
+        linecolor=VioletRed,
+        backgroundcolor=VioletRed!5,
     }
 ]{thmvioletbox}
 
 \declaretheorem[style=thmvioletbox, numberwithin=section, name=Проблема]{problem}
 \declaretheorem[style=thmvioletbox, numbered=no, name=Проблема]{problem*}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{VioletRed!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=VioletRed,
+%        backgroundcolor=VioletRed!5,
+    }
+]{thmvioletline}
+
+\declaretheorem[style=thmvioletline, numberwithin=section, name=Задача]{task}
+\declaretheorem[style=thmvioletline, numbered=no, name=Задача]{task*}
 
 %%%%% Упражнение
 \declaretheoremstyle[
