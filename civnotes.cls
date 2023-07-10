@@ -283,6 +283,7 @@
 \setlength\cftsubsecnumwidth{3em}
 
 %%%%%%%%%%%%%%%%%%%Полезные команды%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{subcaption}
 % Возможность использовать автонумерацию
 \newcounter{index}
 \newcommand*{\No}{\noindent\refstepcounter{index}\textnumero~\theindex}
@@ -330,15 +331,23 @@
 \renewcommand{\chi}{\ensuremath{\upchi}}
 \renewcommand{\psi}{\ensuremath{\uppsi}}
 \renewcommand{\omega}{\ensuremath{\upomega}}
-
+\newcommand*{\vect}[1]{\boldsymbol{#1}} %% разметка для выделения векторов
+\newcommand*{\vectrow}[1]{\overrightarrow{\boldsymbol{#1}}}  %% разметка для векторов-строк
+\newcommand*{\vectcol}[1]{\boldsymbol{#1^{\downarrow}}}      %% разметка для векторов-столбцов
+\newcommand*{\matr}[1]{\boldsymbol{#1}}     %% разметка для выделения матриц
+\newcommand*{\code}[1]{\mathcal{#1}}        %% разметка для выделения линейных кодов
 %%% operators
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\wt}{wt}
 \DeclareMathOperator{\len}{len}
 \DeclareMathOperator{\argmin}{argmin}
 \DeclareMathOperator{\im}{}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\rank}{rank}
 \newcommand{\getsR}{\mathrel{\overset{\$}{\gets}}}
-\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}  %%% масштабирование формулы
+%%%!!! масштабирование формулы
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+%%%%
 
 
 %%%%%%% Красивое оформление математических окружений
