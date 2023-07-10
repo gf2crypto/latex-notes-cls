@@ -433,6 +433,18 @@
 \declaretheorem[style=thmproofbox, name=Доказательство]{replacementproof}
 \renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
 
+%%%%% Проблема
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{VioletRed!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=VioletRed, backgroundcolor=VioletRed!5,
+    }
+]{thmvioletbox}
+
+\declaretheorem[style=thmvioletbox, numberwithin=section, name=Проблема]{problem}
+\declaretheorem[style=thmvioletbox, numbered=no, name=Проблема]{problem*}
 
 %%%%%%%%%%%%%%%%%%%Содержание%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginDocument{%
