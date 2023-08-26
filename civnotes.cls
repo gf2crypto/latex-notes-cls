@@ -40,7 +40,7 @@
 %Дополнительные математические окружения
 \RequirePackage{mathtools}
 %Математический шрифт
-\RequirePackage[bigdelims,vvarbb]{newtxmath}
+\RequirePackage[libertine,bigdelims,vvarbb,scaled=1.03]{newtxmath}
 %Прямые греческие буквы (принято в русской типографии)
 \RequirePackage{upgreek}
 
